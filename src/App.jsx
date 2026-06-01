@@ -210,7 +210,7 @@ const navItemsByRole = {
 const tutorialSteps = [
   {
     title: "Bienvenida a Club Chicaneo +55",
-    body: "Aqu? puedes explorar actividades, reservar y seguir tus pr?ximos eventos sin perderte.",
+    body: "Aqui puedes explorar actividades, reservar y seguir tus pr?ximos eventos sin perderte.",
   },
   {
     title: "Explora con filtros visibles",
@@ -248,7 +248,7 @@ const initialMessages = [
   {
     id: 4,
     author: "provider",
-    text: "Listo, te env?o el enlace de inscripci?n y la informaci?n clave.",
+    text: "Listo, te envio el enlace de inscripción y la informaci?n clave.",
     time: "10:34 a.m.",
     attachment: "Formulario de inscripci?n",
   },
@@ -494,7 +494,7 @@ const demoUsers = [
 const providerManagedActivities = [
   {
     id: "city-tour",
-    title: "Recorrido cultural por el Centro HistÃ³rico de Cali",
+    title: "Recorrido cultural por el Centro Histórico de Cali",
     category: "Cultura",
     imageKey: "city",
     image: detailCity,
@@ -503,12 +503,12 @@ const providerManagedActivities = [
     registeredCount: 11,
     capacity: 16,
     accessible: true,
-    place: "Centro HistÃ³rico de Cali",
+    place: "Centro Histórico de Cali",
     description: "Recorrido guiado por puntos emblemÃ¡ticos del centro con pausas, apoyo visual y explicaciones cercanas.",
   },
   {
     id: "museum-local",
-    title: "ExposiciÃ³n de arte local",
+    title: "Exposición de arte local",
     category: "Cultura",
     imageKey: "museum",
     image: activityMuseum,
@@ -523,7 +523,7 @@ const providerManagedActivities = [
   },
   {
     id: "dance-workshop",
-    title: "Taller de danza folclÃ³rica",
+    title: "Taller de danza folclórica",
     category: "Bienestar",
     imageKey: "painting",
     image: activityPainting,
@@ -541,25 +541,25 @@ const providerRequests = [
   {
     id: "req-1",
     person: "MarÃ­a GonzÃ¡lez",
-    activity: "Recorrido cultural por el Centro HistÃ³rico de Cali",
+    activity: "Recorrido cultural por el Centro Histórico de Cali",
     status: "Pendiente de confirmar",
-    detail: "Solicita apoyo con punto de encuentro y recordatorio telefÃ³nico.",
+    detail: "Solicita apoyo con punto de encuentro y recordatorio telefónico.",
     phone: "3001234567",
   },
   {
     id: "req-2",
     person: "Carlos Herrera",
-    activity: "Taller de danza folclÃ³rica",
+    activity: "Taller de danza folclórica",
     status: "Inscripcion aprobada",
-    detail: "Acepto tÃ©rminos y requiere informaciÃ³n de ingreso accesible.",
+    detail: "Acepto términos y requiere información de ingreso accesible.",
     phone: "3019876543",
   },
   {
     id: "req-3",
-    person: "Rosa MartÃ­nez",
-    activity: "ExposiciÃ³n de arte local",
+    person: "Rosa Martínez",
+    activity: "Exposición de arte local",
     status: "Esperando ajustes",
-    detail: "Pidi? cambio de fecha por cita mÃ©dica y desea nueva confirmaciÃ³n.",
+    detail: "Pidi? cambio de fecha por cita méica y desea nueva confirmación.",
     phone: "3025557788",
   },
 ];
@@ -768,7 +768,7 @@ const notificationsByRole = {
     {
       id: "guest-1",
       title: "Nueva actividad cultural",
-      description: "Ya estÃ¡ disponible un nuevo recorrido por el centro histÃ³rico para explorar en junio.",
+      description: "Ya estÃ¡ disponible un nuevo recorrido por el centro histórico para explorar en junio.",
       time: "Ahora",
     },
   ],
@@ -790,13 +790,13 @@ const notificationsByRole = {
     {
       id: "provider-1",
       title: "Nuevo usuario inscrito",
-      description: "MarÃ­a GonzÃ¡lez se inscribiÃ³ en Recorrido cultural por el Centro HistÃ³rico de Cali.",
+      description: "MarÃ­a GonzÃ¡lez se inscribió en Recorrido cultural por el Centro Histórico de Cali.",
       time: "Hace 3 min",
     },
     {
       id: "provider-2",
       title: "Consulta pendiente",
-      description: "Carlos Herrera pidiÃ³ informaciÃ³n adicional sobre accesibilidad y punto de encuentro.",
+      description: "Carlos Herrera pidió información adicional sobre accesibilidad y punto de encuentro.",
       time: "Hace 18 min",
     },
   ],
@@ -804,13 +804,13 @@ const notificationsByRole = {
     {
       id: "admin-1",
       title: "Nuevo proveedor registrado",
-      description: "Ruta PacÃ­fica envi? documentaci?n para validaci?n institucional.",
+      description: "Ruta Paca­fica envi? documentaci?n para validaci?n institucional.",
       time: "Hace 7 min",
     },
     {
       id: "admin-2",
-      title: "Actividad pendiente de revisiÃ³n",
-      description: "ExposiciÃ³n de arte local sigue esperando aprobaciÃ³n de condiciones de accesibilidad.",
+      title: "Actividad pendiente de revisión",
+      description: "Exposición de arte local sigue esperando aprobación de condiciones de accesibilidad.",
       time: "Hace 22 min",
     },
   ],
@@ -856,7 +856,7 @@ function resolveActivityKey(name = "", image = "") {
   if (normalizedName.includes("yoga") || normalizedImage.includes("yoga")) return "yoga";
   if (normalizedName.includes("museo")) return "museum";
   if (normalizedName.includes("caminata")) return "walk";
-  if (normalizedName.includes("centro histÃ³rico")) return "city-tour";
+  if (normalizedName.includes("centro histórico")) return "city-tour";
   if (normalizedName.includes("playa")) return "beach";
 
   return slugifyText(name);
@@ -947,15 +947,15 @@ function mapSupabaseActivity(row) {
 const adminModerationQueue = [
   {
     id: "mod-1",
-    title: "ExposiciÃ³n de arte local",
-    owner: "SecretarÃ­a de Cultura de Cali",
+    title: "Exposición de arte local",
+    owner: "Secretari­a de Cultura de Cali",
     status: "Pendiente",
     note: "Falta confirmar accesibilidad del espacio y numero final de cupos.",
   },
   {
     id: "mod-2",
     title: "Excursi?n a la playa",
-    owner: "Ruta PacÃ­fica",
+    owner: "Ruta Paci­fica",
     status: "Observacion",
     note: "Debe aclarar condiciones de transporte y restricciones de movilidad.",
   },
@@ -964,7 +964,7 @@ const adminModerationQueue = [
     title: "Yoga para todos",
     owner: "Escuela Nacional del Deporte",
     status: "Aprobada",
-    note: "Cumple requisitos de informaciÃ³n clara y apoyo visual.",
+    note: "Cumple requisitos de información clara y apoyo visual.",
   },
 ];
 
@@ -972,7 +972,7 @@ const adminReports = [
   {
     id: "rep-1",
     title: "Accesibilidad activa",
-    description: "43 usuarios guardaron preferencias de contraste o tamaÃ±o de texto en su Ãºltima visita.",
+    description: "43 usuarios guardaron preferencias de contraste o tamañ±o de texto en su Uºltima visita.",
     metric: "29%",
   },
   {
@@ -1305,12 +1305,12 @@ function Sidebar({ activeView, isAuthenticated, navItems, onHelpOpen, onLogout, 
         {isAuthenticated ? (
           <button className="nav-button nav-button-muted" onClick={onLogout} type="button">
             <Icon className="nav-button-icon" name="logout" size={18} />
-            <span>Cerrar sesiÃ³n</span>
+            <span>Cerrar sesión</span>
           </button>
         ) : (
           <button className="nav-button nav-button-muted" onClick={onOpenLogin} type="button">
             <Icon className="nav-button-icon" name="user-plus" size={18} />
-            <span>Iniciar sesiÃ³n</span>
+            <span>Iniciar sesión</span>
           </button>
         )}
       </div>
@@ -1394,7 +1394,7 @@ function Topbar({
           </button>
         ) : (
           <Button onClick={onOpenLogin} variant="outline">
-            Iniciar sesiÃ³n
+            Iniciar sesión
           </Button>
         )}
       </div>
@@ -1465,7 +1465,7 @@ function HelpDrawer({ onClose }) {
         <div className="drawer-header">
           <div>
             <Badge tone="sky">Ayuda</Badge>
-            <h3>Centro de ayuda rÃ¡pido</h3>
+            <h3>Centro de ayuda ra¡pido</h3>
           </div>
           <button aria-label="Cerrar ayuda" className="toast-close" onClick={onClose} type="button">
             <Icon name="close" size={18} />
@@ -1483,7 +1483,7 @@ function HelpDrawer({ onClose }) {
           </article>
           <article className="mini-card">
             <strong>Contactanos</strong>
-            <p>Si necesitas apoyo humano, puedes escribirnos o pedir acompaÃ±amiento telefÃ³nico.</p>
+            <p>Si necesitas apoyo humano, puedes escribirnos o pedir acompañ±amiento telefónico.</p>
           </article>
         </div>
       </div>
@@ -1998,7 +1998,7 @@ function ActivitiesView({
     <section className="page-section">
       <div className="section-kicker">
         <h2>Filtrado de actividades</h2>
-        <p>Filtros visibles, entendibles y siempre disponibles para encontrar opciones rÃ¡pido y sin confusiÃ³n.</p>
+        <p>Filtros visibles, entendibles y siempre disponibles para encontrar opciones ra¡pido y sin confusión.</p>
       </div>
 
       <div className="split-layout">
@@ -2275,7 +2275,7 @@ function CalendarView({ reservations, setReservations, onOpenReservation }) {
     <section className="page-section">
       <div className="section-kicker">
         <h2>Reserva y seguimiento en un solo lugar</h2>
-        <p>El calendario conserva la informaciÃ³n importante de forma visible y ordenada.</p>
+        <p>El calendario conserva la información importante de forma visible y ordenada.</p>
       </div>
 
       <div className="split-layout calendar-layout">
@@ -2515,7 +2515,7 @@ function RegisterView({ registerErrors, registerForm, registered, setRegisterFor
     <section className="page-section">
       <div className="section-kicker">
         <h2>Registro de usuario</h2>
-        <p>Formulario simple, claro y acompaÃ±ado por mensajes de apoyo comprensibles.</p>
+        <p>Formulario simple, claro y acompañ±ado por mensajes de apoyo comprensibles.</p>
       </div>
 
       <div className="split-layout">
@@ -2523,7 +2523,7 @@ function RegisterView({ registerErrors, registerForm, registered, setRegisterFor
           <img alt="Persona mayor utilizando un computador para registrarse" className="register-story-image" src={registerPortrait} />
           <div className="register-story-copy">
             <h3>Registro guiado</h3>
-            <p>El usuario debe completar el registro en menos de 5 minutos y con mÃ¡ximo un error corregible.</p>
+            <p>El usuario debe completar el registro en menos de 5 minutos y con má¡ximo un error corregible.</p>
           </div>
           <div className="register-metrics">
             <article className="metric-card">
@@ -2557,7 +2557,7 @@ function RegisterView({ registerErrors, registerForm, registered, setRegisterFor
               <span>Nombre</span>
               <input
                 onChange={(event) => setRegisterForm((current) => ({ ...current, name: event.target.value }))}
-                placeholder="Ej: MarÃ­a"
+                placeholder="Ej: Maria"
                 value={registerForm.name}
               />
               {registerErrors.name && <small className="field-error">{registerErrors.name}</small>}
@@ -2575,7 +2575,7 @@ function RegisterView({ registerErrors, registerForm, registered, setRegisterFor
           </div>
 
           <label className="field">
-            <span>Correo electrÃ³nico</span>
+            <span>Correo electrónico</span>
             <input
               onChange={(event) => setRegisterForm((current) => ({ ...current, email: event.target.value }))}
               placeholder="Ej: maria@email.com"
@@ -2620,7 +2620,7 @@ function RegisterView({ registerErrors, registerForm, registered, setRegisterFor
               }
               type="checkbox"
             />
-            <span>Acepto los tÃ©rminos y condiciones.</span>
+            <span>Acepto los términos y condiciones.</span>
           </label>
           {registerErrors.acceptedTerms && <small className="field-error">{registerErrors.acceptedTerms}</small>}
 
@@ -2651,7 +2651,7 @@ function ProfileView({ currentUser, settings }) {
     <section className="page-section">
       <div className="section-kicker">
         <h2>Mi perfil</h2>
-        <p>AquÃ© puedes revisar tus datos y las preferencias de accesibilidad que te ayudan a usar la plataforma con comodidad.</p>
+        <p>Aqué puedes revisar tus datos y las preferencias de accesibilidad que te ayudan a usar la plataforma con comodidad.</p>
       </div>
 
       <div className="split-layout profile-layout">
@@ -2684,7 +2684,7 @@ function ProfileView({ currentUser, settings }) {
               </div>
               <div>
                 <strong>{currentUser.ciudad}</strong>
-                <span>{currentUser.direccion}</span>
+                <span>{currentUser.dirección}</span>
               </div>
             </article>
             <article className="mini-card mini-card-row">
@@ -2750,7 +2750,7 @@ function ProviderActivityModal({ activity, form, mode, onClose, onEdit, onFormCh
         <div className="modal-header">
           <div>
             <Badge tone={isDetail ? "sky" : "violet"}>{title}</Badge>
-            <h3>{isDetail ? activity?.title : "Completa la informaciÃ³n principal"}</h3>
+            <h3>{isDetail ? activity?.title : "Completa la información principal"}</h3>
           </div>
           <button aria-label="Cerrar ventana" className="toast-close" onClick={onClose} type="button">
             <Icon name="close" size={18} />
@@ -2847,7 +2847,7 @@ function ProviderActivityModal({ activity, form, mode, onClose, onEdit, onFormCh
               </label>
 
               <label className="field">
-                <span>Estado de publicaciÃ³n</span>
+                <span>Estado de publicación</span>
                 <select onChange={(event) => onFormChange("status", event.target.value)} value={form.status}>
                   {providerStatusOptions.map((status) => (
                     <option key={status} value={status}>
@@ -2918,7 +2918,7 @@ function ProviderDashboardView({ currentUser, onCreateActivity, onOpenRequest, r
       <div className="section-kicker">
         <Badge tone="violet">Panel de proveedor</Badge>
         <h2>{`Hola, ${currentUser.nombre}`}</h2>
-        <p>Administra tus actividades, responde solicitudes y mantén la informaciÃ³n clara para cada inscrito.</p>
+        <p>Administra tus actividades, responde solicitudes y mantén la información clara para cada inscrito.</p>
       </div>
 
       <div className="summary-grid">
@@ -2940,7 +2940,7 @@ function ProviderDashboardView({ currentUser, onCreateActivity, onOpenRequest, r
           <div className="panel-header">
             <div>
               <h3>Actividades a cargo</h3>
-              <p className="section-caption">Visibilidad r?pida del estado de cada publicaciÃ³n.</p>
+              <p className="section-caption">Visibilidad r?pida del estado de cada publicación.</p>
             </div>
             <Button onClick={onCreateActivity} variant="secondary">
               Nueva actividad
@@ -2974,7 +2974,7 @@ function ProviderDashboardView({ currentUser, onCreateActivity, onOpenRequest, r
 
         <aside className="panel panel-sidebar">
           <div className="panel-header">
-            <h3>Alertas de gestiÃ³n</h3>
+            <h3>Alertas de gestión</h3>
           </div>
           <div className="stack-list">
             {requests.map((request) => (
@@ -2997,13 +2997,13 @@ function ProviderActivitiesView({ activities, onCreateActivity, onEditActivity, 
       <div className="section-kicker">
         <Badge tone="mint">Mis actividades</Badge>
         <h2>Publicaciones del proveedor</h2>
-        <p>Revisa estado, cupos y claridad de la informaciÃ³n antes de cada jornada.</p>
+        <p>Revisa estado, cupos y claridad de la información antes de cada jornada.</p>
       </div>
 
       <div className="panel panel-toolbar">
         <div>
           <h3>Gestion de actividades</h3>
-          <p className="section-caption">Crea, ajusta o revisa cada publicaciÃ³n desde un solo lugar.</p>
+          <p className="section-caption">Crea, ajusta o revisa cada publicación desde un solo lugar.</p>
         </div>
         <Button onClick={onCreateActivity}>Nueva actividad</Button>
       </div>
@@ -3060,7 +3060,7 @@ function ProviderBookingsView({
       <div className="section-kicker">
         <Badge tone="amber">Solicitudes</Badge>
         <h2>Seguimiento de inscripciones</h2>
-        <p>Consulta r?pidamente quiÃ©nes esperan confirmaciÃ³n y quÃ© apoyo adicional necesitan.</p>
+        <p>Consulta r?pidamente quiénes esperan confirmación y qué apoyo adicional necesitan.</p>
       </div>
 
       <div className="split-layout provider-layout">
@@ -3450,7 +3450,7 @@ function AdminDashboardView({ currentUser, moderationQueue, onOpenModeration, on
       <div className="split-layout provider-layout">
         <div className="panel">
           <div className="panel-header">
-            <h3>Cola de revisiÃ³n</h3>
+            <h3>Cola de revisión</h3>
           </div>
           <div className="stack-list">
             {moderationQueue.map((item) => (
@@ -3527,7 +3527,7 @@ function AdminActivitiesView({ moderationQueue, onApprove, onEditModeration }) {
   return (
     <section className="page-section">
       <div className="section-kicker">
-        <Badge tone="amber">ModeraciÃ³n</Badge>
+        <Badge tone="amber">Moderación</Badge>
         <h2>Revisi?n de actividades</h2>
         <p>Antes de publicar, verifica claridad del contenido, accesibilidad y datos de contacto visibles.</p>
       </div>
@@ -3968,7 +3968,7 @@ export default function App() {
 
     setFeedback({
       type: "warning",
-      title: "AcciÃ³n disponible al iniciar sesiÃ³n",
+      title: "Acción disponible al iniciar sesión",
       message,
     });
     setAuthMode("login");
@@ -3976,7 +3976,7 @@ export default function App() {
   };
 
   const handleToggleSaved = async (activityId) => {
-    if (!requireAuthentication("Inicie sesiÃ³n para guardar actividades en Me interesa.")) return;
+    if (!requireAuthentication("Inicie sesión para guardar actividades en Me interesa.")) return;
 
     const alreadySaved = savedIds.includes(activityId);
     const nextSavedIds = alreadySaved
@@ -4025,7 +4025,7 @@ export default function App() {
   };
 
   const handleReserveActivity = async (activity) => {
-    if (!requireAuthentication("Inicie sesiÃ³n para inscribirse a una actividad.")) return;
+    if (!requireAuthentication("Inicie sesión para inscribirse a una actividad.")) return;
 
     const alreadyReserved = reservations.some((reservation) => reservation.activityId === activity.id);
 
@@ -4091,7 +4091,7 @@ export default function App() {
     if (registerForm.confirmPassword !== registerForm.password) {
       errors.confirmPassword = "Las contrasenas deben coincidir.";
     }
-    if (!registerForm.acceptedTerms) errors.acceptedTerms = "Debes aceptar los tÃ©rminos.";
+    if (!registerForm.acceptedTerms) errors.acceptedTerms = "Debes aceptar los términos.";
 
     setRegisterErrors(errors);
     setRegistered(false);
@@ -4157,7 +4157,7 @@ export default function App() {
     }
 
     if (matchedUser.estado_cuenta !== "activo") {
-      setLoginError("Tu cuenta no est? activa en este momento. Contacta soporte para recibir ayuda.");
+      setLoginError("Tu cuenta no estó activa en este momento. Contacta soporte para recibir ayuda.");
       return;
     }
 
@@ -4198,7 +4198,7 @@ export default function App() {
     }
 
     if (!isAuthenticated && ["calendar", "messages", "profile", "provider-bookings", "admin-users", "admin-reports"].includes(nextView)) {
-      requireAuthentication("Inicie sesiÃ³n para usar las secciones personales del sistema.");
+      requireAuthentication("Inicie sesión para usar las secciones personales del sistema.");
       return;
     }
 
@@ -4254,7 +4254,7 @@ export default function App() {
     if (!title || !place || !date || !description || Number.isNaN(capacity) || capacity < 1) {
       setFeedback({
         type: "warning",
-        title: "Completa la informaciÃ³n de la actividad",
+        title: "Completa la información de la actividad",
         message: "Antes de guardar, revisa nombre, fecha, lugar, descripcion y cupos disponibles.",
       });
       return;
@@ -4297,8 +4297,8 @@ export default function App() {
       title: providerActivityModal.mode === "edit" ? "Actividad actualizada" : "Actividad creada",
       message:
         providerActivityModal.mode === "edit"
-          ? "Los cambios quedaron guardados y ya puedes seguir gestionando la publicaciÃ³n."
-          : "La nueva actividad ya aparece en tu panel para continuar con la gestiÃ³n.",
+          ? "Los cambios quedaron guardados y ya puedes seguir gestionando la publicación."
+          : "La nueva actividad ya aparece en tu panel para continuar con la gestión.",
     });
 
     closeProviderActivityModal();
@@ -4774,7 +4774,7 @@ export default function App() {
               }}
               type="button"
             >
-              Volver al inicio de sesiÃ³n
+              Volver al inicio de sesión
             </button>
             <button
               className="text-button"
